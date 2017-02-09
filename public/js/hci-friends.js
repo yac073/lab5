@@ -3,6 +3,10 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	$('.friends a').click(function(e) {
+		e.preventDefault();
+		$(this).find('h2').text(anagrammedName($(this).text()));
+	});
 })
 
 /*
